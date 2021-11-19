@@ -1,4 +1,5 @@
-package entities;
+package domain;
+
 
 import javax.persistence.*;
 
@@ -11,24 +12,30 @@ public class ClientEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-
-
     @Column(name = "first name")
     private String firstName;
+
     @Column(name = "surname")
     private String surname;
+
     @Column(name = "birthday")
     private int birthday;
+
     @Column(name = "email")
     private String email;
+
     @Column(name = "password")
     private String password;
+
     @Column(name = "country")
     private String country;
+
     @Column(name = "city")
     private String city;
+
     @Column(name = "street")
     private String street;
+
     @Column(name = "order")
     private String order;
 
