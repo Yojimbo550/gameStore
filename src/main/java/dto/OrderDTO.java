@@ -1,44 +1,16 @@
-package domain;
+package dto;
 
-import javax.persistence.*;
+import javax.persistence.Column;
 
-@Entity
-@Table(name = "order")
-public class OrderEntity {
+public class OrderDTO {
 
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Column(name = "order")
     private int order;
-
-    @Column(name = "payment type")
-    private String paymentType;
-
-    @Column(name = "delivery type")
-    private String deliveryType;
-
-    @Column(name = "ordered products")
+    private String paymentMethod;
+    private String deliveryMethod;
     private String orderedProducts;
-
-    @Column(name = "payment status")
     private String paymentStatus;
-
-    @Column(name = "order status")
     private String orderStatus;
-
-    @Column(name = "client address")
     private String clientAddress;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getOrder() {
         return order;
@@ -48,20 +20,20 @@ public class OrderEntity {
         this.order = order;
     }
 
-    public String getPaymentType() {
-        return paymentType;
+    public String getPaymentMethod() {
+        return paymentMethod;
     }
 
-    public void setPaymentType(String paymentType) {
-        this.paymentType = paymentType;
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 
-    public String getDeliveryType() {
-        return deliveryType;
+    public String getDeliveryMethod() {
+        return deliveryMethod;
     }
 
-    public void setDeliveryType(String deliveryType) {
-        this.deliveryType = deliveryType;
+    public void setDeliveryMethod(String deliveryMethod) {
+        this.deliveryMethod = deliveryMethod;
     }
 
     public String getOrderedProducts() {

@@ -1,48 +1,17 @@
-package domain;
+package dto;
 
+import javax.persistence.Column;
 
-import javax.persistence.*;
+public class ClientDTO {
 
-@Entity
-@Table(name = "client")
-public class ClientEntity {
-
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Column(name = "first name")
     private String firstName;
-
-    @Column(name = "surname")
     private String surname;
-
-    @Column(name = "birthday")
     private int birthday;
-
-    @Column(name = "email")
     private String email;
-
-    @Column(name = "country")
     private String country;
-
-    @Column(name = "city")
     private String city;
-
-    @Column(name = "street")
     private String street;
-
-    @Column(name = "order")
     private String order;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getFirstName() {
         return firstName;
